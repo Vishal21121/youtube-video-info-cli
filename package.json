@@ -1,0 +1,20 @@
+{
+  "name": "using-clark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "dotenv": "^16.3.1",
+    "node-emoji": "^2.1.3",
+    "openai": "^4.24.1",
+    "youtube-transcript": "^1.0.6"
+  }
+}
