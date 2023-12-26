@@ -7,12 +7,16 @@ dotenv.config();
 
 
 async function getTranscript(url, query) {
-    let data = await YoutubeTranscript.fetchTranscript(url);
-    let content = "";
-    data.forEach((el) => {
-        content += el.text;
-    });
-    return await callGPT(content, query)
+    try {
+        let data = await YoutubeTranscript.fetchTranscript(url);
+        let content = "";
+        data.forEach((el) => {
+            content += el.text;
+        });
+        return await callGPT(content, query)
+    } catch (error) {
+        console.log("\n", error.message);
+    }
 }
 
 async function callGPT(content, query) {
